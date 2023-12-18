@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вычисление суммы цифр</title>
+</head>
+<body>
+  <h1>Вычисление суммы четных цифр</h1>
+  <input type="number" id="inputNumber1" placeholder="Введите число">
+  <input type="number" id="inputNumber2" placeholder="Введите второе число">
+  <button onclick="calculateEvenDigitSum()">Вычислить сумму цифр</button>
+  <div id="result"></div>
+
+  <script>
+    function calculateEvenDigitSum() {
+    // Получаем значение из input
+    const inputElement1 = document.getElementById('inputNumber1');
+    const inputElement2 = document.getElementById('inputNumber2');
+    const inputValue1 = parseInt(inputElement1.value);
+    const inputValue2 = parseInt(inputElement2.value);
+
+    // Проверка, что введено число
+    if (!isNaN(inputValue1) && !isNaN(inputValue2)) {
+
+      result = inputValue1 + inputValue2
+
+      // Отображаем результат на странице
+      const resultElement = document.getElementById('result');
+      resultElement.innerHTML = `<p>Сумма цифр ${inputValue1} и ${inputValue2}: ${result}</p>`;
+    } else {
+      alert('Пожалуйста, введите корректное число.');
+    }
+  }
+</script>
+</body>
+</html>
